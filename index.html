@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writers Never Die | Immortal Bengali Literary Haven</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#060B18',
+                            800: '#0B132B',
+                            700: '#1C2541',
+                            600: '#2A365C'
+                        },
+                        gold: {
+                            300: '#FCE788',
+                            400: '#F7D048',
+                            500: '#E5B826',
+                            600: '#C79A17'
+                        },
+                        burgundy: {
+                            600: '#800020',
+                            700: '#5F0018',
+                            800: '#3F0010'
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        bengali: ['"Hind Siliguri"', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #060B18;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1C2541;
+            border-radius: 4px;
+            border: 1px solid #E5B826;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E5B826;
+        }
+
+        /* Custom Glassmorphism Effect */
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 184, 38, 0.15);
+        }
+        .glass-card:hover {
+            border-color: rgba(229, 184, 38, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(229, 184, 38, 0.15);
+        }
+
+        /* Gold Gradient Text */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF099 0%, #E5B826 50%, #997509 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glowing Accent */
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(229, 184, 38, 0.25);
+        }
+
+        /* Book Cover Hover effect */
+        .book-3d {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+        }
+        .book-3d:hover {
+            transform: translateY(-8px) rotateY(-5deg) scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-navy-900 text-slate-200 font-sans antialiased selection:bg-gold-500 selection:text-navy-900 overflow-x-hidden">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-40 bg-navy-900/80 backdrop-blur-md border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-400 to-burgundy-600 flex items-center justify-center text-navy-900 font-bold font-cinzel text-xl shadow-lg">
+                    <i class="fa-solid fa-feather-pointed"></i>
+                </div>
+                <div>
+                    <span class="font-cinzel text-lg font-bold tracking-wider text-white block leading-tight">WRITERS NEVER DIE</span>
+                    <span class="font-bengali text-xs text-gold-400">অমর সাহিত্যিক নীলাচল</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                <a href="#authors" class="hover:text-gold-400 transition-colors">Titans</a>
+                <a href="#books" class="hover:text-gold-400 transition-colors">Books Showcase</a>
+                <a href="#metrics" class="hover:text-gold-400 transition-colors">Metrics & Influence</a>
+                <a href="#style-matrix" class="hover:text-gold-400 transition-colors">Style & Woodsmen</a>
+                <a href="#cinema" class="hover:text-gold-400 transition-colors">Adaptations</a>
+                <a href="#media-hub" class="hover:text-gold-400 transition-colors">Media Hub</a>
+                <a href="#quotes" class="hover:text-gold-400 transition-colors">Quotes</a>
+                <a href="#sandbox" class="px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/40 text-gold-300 hover:bg-gold-500 hover:text-navy-900 transition-all font-semibold">
+                    <i class="fa-solid fa-pen-nib mr-1"></i> Writing Haven
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="lg:hidden text-gold-400 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-navy-800 border-b border-gold-500/20 px-6 py-4 space-y-3">
+            <a href="#authors" class="block hover:text-gold-400 py-1">Titans</a>
+            <a href="#books" class="block hover:text-gold-400 py-1">Books Showcase</a>
+            <a href="#metrics" class="block hover:text-gold-400 py-1">Metrics & Influence</a>
+            <a href="#style-matrix" class="block hover:text-gold-400 py-1">Style & Woodsmen</a>
+            <a href="#cinema" class="block hover:text-gold-400 py-1">Adaptations</a>
+            <a href="#media-hub" class="block hover:text-gold-400 py-1">Media Hub</a>
+            <a href="#quotes" class="block hover:text-gold-400 py-1">Quotes</a>
+            <a href="#sandbox" class="block hover:text-gold-400 py-1">Writing Haven</a>
+            <a href="#references" class="block hover:text-gold-400 py-1">Megazone Directory</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- 1. Hero & Haven Slogan Section -->
+        <section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16 px-4 sm:px-6">
+            <!-- Background Decorative Orbs -->
+            <div class="absolute top-1/4 left-10 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-burgundy-600/20 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="relative max-w-5xl mx-auto text-center z-10">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-navy-800/80 border border-gold-500/30 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-xs font-semibold text-gold-400 tracking-wider uppercase">Living Literary Archive</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-cinzel font-black tracking-tight text-white mb-4">
+                    Writers Never Die.
+                </h1>
+                <p class="font-bengali text-2xl sm:text-4xl text-gold-400 mb-6 font-semibold">
+                    "লেখা তৈরি করে স্বৰ্গ। গড়ো তোমার নিজের।"
+                </p>
+                <p class="text-slate-300 text-lg sm:text-xl max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                    Writing Makes Haven. Make Yours Own. Celebrating the immortal legacy, vibrant worlds, and eternal soul of Bengal's four storytelling titans.
+                </p>
+
+                <!-- Dynamic Statistics & Live Metrics -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
+                    <div class="glass-card p-5 rounded-2xl">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-white font-cinzel">1,000+</div>
+                        <div class="text-xs sm:text-sm text-gold-400 mt-1 font-bengali">অমর উপন্যাস ও গ্রন্থ (Total Writings)</div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-white font-cinzel">50M+</div>
+                        <div class="text-xs sm:text-sm text-gold-400 mt-1 font-bengali">বিশ্বব্যাপী পাঠক (Global Readers)</div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-white font-cinzel">100+</div>
+                        <div class="text-xs sm:text-sm text-gold-400 mt-1 font-bengali">চলচ্চিত্র ও নাটক (Cinema & Films)</div>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-white font-cinzel">∞</div>
+                        <div class="text-xs sm:text-sm text-gold-400 mt-1 font-bengali">অমর চেতনা (Eternal Life)</div>
+                    </div>
+                </div>
+
+                <!-- Interactive Quote Rotator -->
+                <div id="heroQuoteContainer" class="glass-card p-6 rounded-2xl max-w-2xl mx-auto border-l-4 border-l-gold-500 relative">
+                    <i class="fa-solid fa-quote-left text-gold-500/20 text-5xl absolute top-3 left-4"></i>
+                    <p id="heroQuoteText" class="text-lg text-slate-100 font-bengali italic relative z-10 mb-2">
+                        "মানুষ মরে যায় কিন্তু মানুষের সৃষ্টি কখনো মরে না। সৃষ্টি দিয়েই মানুষ বেঁচে থাকে যুগের পর যুগ।"
+                    </p>
+                    <div id="heroQuoteAuthor" class="text-xs font-semibold text-gold-400 font-cinzel tracking-widest">
+                        — LEGENDS OF BENGAL
+                    </div>
+                </div>
+
+                <!-- Quick Haven Navigation Buttons -->
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <a href="#authors" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 font-bold hover:shadow-lg hover:shadow-gold-500/30 transition-all transform hover:-translate-y-0.5">
+                        Explore Titans Wiki <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#sandbox" class="px-8 py-3.5 rounded-full glass-card text-white hover:bg-navy-800 border-gold-500/40 font-semibold transition-all">
+                        Write in Haven <i class="fa-solid fa-pen-clip ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Author Profile Cards (Modern Wiki Style) -->
+        <section id="authors" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-14">
+                <span class="text-gold-400 font-cinzel text-xs font-bold tracking-widest uppercase">The Four Pillars</span>
+                <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-white mt-2">Titan Writers Wiki Profiles</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mt-3 font-bengali">
+                    চারজন মহান কথাসাহিত্যিক – যাদের সাহিত্যভাবনা, শৈলী, জীবনদর্শন ও অনন্য সৃষ্টি বাংলা সাহিত্যকে সমৃদ্ধ করেছে।
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="authorCardsGrid">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- 3. Featured Books Showcase (5 Books per Author = 20 Books Total) -->
+        <section id="books" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-navy-800/40 rounded-3xl border border-gold-500/10 my-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-gold-400 font-cinzel text-xs font-bold tracking-widest uppercase">Masterpieces Collection</span>
+                    <h2 class="text-3xl sm:text-4xl font-cinzel font-bold text-white mt-1">20 Iconic Books Showcase</h2>
+                    <p class="text-slate-400 text-sm mt-1 font-bengali">প্রতিটি লেখকের ৫টি করে কালজয়ী সৃষ্টি – বিস্তারিত পড়তে বইটিতে ক্লিক করুন।</p>
+                </div>
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-2 mt-4 md:mt-0" id="bookFilterTabs">
+                    <button data-filter="all" class="book-filter-btn active px-4 py-2 rounded-full text-xs font-bold bg-gold-500 text-navy-900 transition-all">All (20)</button>
+                    <button data-filter="sunil" class="book-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-navy-700 text-slate-300 hover:text-white transition-all">Sunil</button>
+                    <button data-filter="humayun" class="book-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-navy-700 text-slate-300 hover:text-white transition-all">Humayun</button>
+                    <button data-filter="samaresh" class="book-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-navy-700 text-slate-300 hover:text-white transition-all">Samaresh</button>
+                    <button data-filter="shirshendu" class="book-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-navy-700 text-slate-300 hover:text-white transition-all">Shirshendu</button>
+                </div>
+            </div>
+
+            <!-- Books Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6" id="booksGrid">
+                <!-- Injected via JavaScript -->
+            </div>
+        </section>
+
+        <!-- 4. Literary Metrics & Analytics -->
+        <section id="metrics" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-14">
+                <span class="text-gold-400 font-cinzel text-xs font-bold tracking-widest uppercase">Comparative Analytics</span>
+                <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-white mt-2">Literary Legacy & Influence</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mt-3 font-bengali">
+                    জনপ্রিয়তা, পাঠকপ্রিয়তা, যুবসমাজ ও সাহিত্যের দর্শনে চার মহারথীর প্রভাব।
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Metric Card 1 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-amber-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="p-3 rounded-xl bg-amber-400/10 text-amber-400 text-xl"><i class="fa-solid fa-trophy"></i></span>
+                        <span class="text-xs font-bold font-cinzel text-amber-400">MASS APPEAL</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Best Selling Writer</h3>
+                    <p class="text-2xl font-bengali text-gold-400 font-semibold mb-2">হুমায়ূন আহমেদ (Humayun Ahmed)</p>
+                    <p class="text-slate-300 text-sm font-bengali leading-relaxed">
+                        এককভাবে বাংলা সাহিত্যে সর্বাধিক বিক্রিত বইয়ের রেকর্ডধারী। বইমেলা ও পাঠ্যাভ্যাস তৈরিতে যার ভূমিকা অনন্য ও ঐতিহাসিক।
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50 flex justify-between text-xs text-slate-400">
+                        <span>Book Count: 250+</span>
+                        <span>Mass Appeal: 99%</span>
+                    </div>
+                </div>
+
+                <!-- Metric Card 2 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-blue-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="p-3 rounded-xl bg-blue-400/10 text-blue-400 text-xl"><i class="fa-solid fa-earth-americas"></i></span>
+                        <span class="text-xs font-bold font-cinzel text-blue-400">CULTURAL ICON</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Most Famous Globally</h3>
+                    <p class="text-2xl font-bengali text-gold-400 font-semibold mb-2">সুনীল ও হুমায়ূন (Sunil & Humayun)</p>
+                    <p class="text-slate-300 text-sm font-bengali leading-relaxed">
+                        সুনীল সাহিত্য আকাদেমির সভাপতি হিসেবে বিশ্বমঞ্চে প্রতিনিধিত্ব করেছেন, আর হুমায়ূন আহমেদ প্রবাসী বাঙালিদের হৃদয় জয় করেছেন।
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50 flex justify-between text-xs text-slate-400">
+                        <span>Global Reach: Worldwide</span>
+                        <span>Translations: 15+ Languages</span>
+                    </div>
+                </div>
+
+                <!-- Metric Card 3 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-emerald-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="p-3 rounded-xl bg-emerald-400/10 text-emerald-400 text-xl"><i class="fa-solid fa-fire"></i></span>
+                        <span class="text-xs font-bold font-cinzel text-emerald-400">YOUTH & REBELLION</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Youth & Society Impact</h3>
+                    <p class="text-2xl font-bengali text-gold-400 font-semibold mb-2">সমরেশ ও হুমায়ূন (Samaresh & Humayun)</p>
+                    <p class="text-slate-300 text-sm font-bengali leading-relaxed">
+                        'কালবেলা'র অনিমেষ-মাধবীলতা তরুণ প্রজন্মকে শিখিয়েছে লড়াই ও প্রেম; আবার হিমু শিখিয়েছে বস্তুবাদী জীবন ছেড়ে প্রকৃতিকে ভালোবাসতে।
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50 flex justify-between text-xs text-slate-400">
+                        <span>Youth Cult Following: Extremely High</span>
+                    </div>
+                </div>
+
+                <!-- Metric Card 4 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-purple-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="p-3 rounded-xl bg-purple-400/10 text-purple-400 text-xl"><i class="fa-solid fa-heart"></i></span>
+                        <span class="text-xs font-bold font-cinzel text-purple-400">READERS' FAVORITE</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Readers' Choice Best</h3>
+                    <p class="text-2xl font-bengali text-gold-400 font-semibold mb-2">শীর্ষেন্দু ও হুমায়ূন (Shirshendu & Humayun)</p>
+                    <p class="text-slate-300 text-sm font-bengali leading-relaxed">
+                        শীর্ষেন্দুর অদ্ভুতুড়ে রস ও জীবনের আধ্যাত্মিক স্পর্শ পাঠকদের আত্মিক শান্তি দেয়, আর হুমায়ূনের আবেগ পাঠকদের হাসায় ও কাঁদায়।
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50 flex justify-between text-xs text-slate-400">
+                        <span>Affection Rating: 10/10</span>
+                    </div>
+                </div>
+
+                <!-- Metric Card 5 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-pink-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="p-3 rounded-xl bg-pink-400/10 text-pink-400 text-xl"><i class="fa-solid fa-face-smile"></i></span>
+                        <span class="text-xs font-bold font-cinzel text-pink-400">SOULFUL HUMOR</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Happiest & Warmest</h3>
+                    <p class="text-2xl font-bengali text-gold-400 font-semibold mb-2">শীর্ষেন্দু মুখোপাধ্যায় (Shirshendu)</p>
+                    <p class="text-slate-300 text-sm font-bengali leading-relaxed">
+                        মনোরম হাস্যরস, ভূত ও গোয়েন্দাদের সহাস্য উপস্থিতি এবং সাধারণ মানুষের অপার সারল্য তুলে ধরার অনন্য কারিগর।
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50 flex justify-between text-xs text-slate-400">
+                        <span>Warmth Factor: Highest</span>
+                    </div>
+                </div>
+
+                <!-- Metric Card 6 -->
+                <div class="glass-card p-6 rounded-2xl border-t-4 border-t-yellow-400">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="p-3 rounded-xl bg-yellow-400/10 text-yellow-400 text-xl"><i class="fa-solid fa-brain"></i></span>
+                        <span class="text-xs font-bold font-cinzel text-yellow-400">PHILOSOPHICAL DEPTH</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Noble & Philosophical</h3>
+                    <p class="text-2xl font-bengali text-gold-400 font-semibold mb-2">সুনীল ও সমরেশ (Sunil & Samaresh)</p>
+                    <p class="text-slate-300 text-sm font-bengali leading-relaxed">
+                        ইতিহাসের সুগভীর অনুসন্ধান, রাজনৈতিক উত্থান-পতন এবং মানুষের ভেতরের নীলকণ্ঠ ও নিঃসঙ্গ আত্মাকে তুলে ধরায় অপ্রতিদ্বন্দ্বী।
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-slate-700/50 flex justify-between text-xs text-slate-400">
+                        <span>Literary Depth: Masterpiece</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Writing Style & Woodsmen Haven Matrix -->
+        <section id="style-matrix" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="glass-card p-8 sm:p-12 rounded-3xl border border-gold-500/20">
+                <div class="max-w-3xl mb-10">
+                    <span class="text-gold-400 font-cinzel text-xs font-bold tracking-widest uppercase">Literary Alchemy</span>
+                    <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-white mt-2">Writing Style & Nature Haven</h2>
+                    <p class="text-slate-300 mt-2 font-bengali">
+                        বাস্তবতাবাদ, জাদুকরী বাস্তবতা, অরণ্যের নির্জনতা ও প্রকৃতির প্রেমে চার লেখকের নিজস্ব লেখার ভূবন।
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Sunil Matrix -->
+                    <div class="bg-navy-800/80 p-6 rounded-2xl border border-slate-700">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-4">
+                            <i class="fa-solid fa-scroll"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Sunil Gangopadhyay</h4>
+                        <span class="text-xs font-bold text-gold-400 uppercase tracking-wider block mt-1">Urban Romantic & Epic Historian</span>
+                        <p class="text-slate-300 text-xs font-bengali mt-3 leading-relaxed">
+                            কবিতার ছন্দময় গদ্য, ঐতিহাসিক বাস্তবতাবাদ এবং কলকাতার গলি থেকে শুরু করে নিঃসঙ্গ হৃদয়ের নীলকণ্ঠ রূপায়ন।
+                        </p>
+                    </div>
+
+                    <!-- Humayun Matrix -->
+                    <div class="bg-navy-800/80 p-6 rounded-2xl border border-slate-700">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Humayun Ahmed</h4>
+                        <span class="text-xs font-bold text-gold-400 uppercase tracking-wider block mt-1">Magical Realism & Simplicity</span>
+                        <p class="text-slate-300 text-xs font-bengali mt-3 leading-relaxed">
+                            সহজ-সরল সাবলীল বাক্য, জোছনা ও বৃষ্টির জাদু, মনস্তাত্ত্বিক রহস্য (মিসির আলি) এবং নিয়তি ও আবেগের অদ্ভুত ক্যানভাস (নুহাশ পল্লী)।
+                        </p>
+                    </div>
+
+                    <!-- Samaresh Matrix -->
+                    <div class="bg-navy-800/80 p-6 rounded-2xl border border-slate-700">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 text-xl mb-4">
+                            <i class="fa-solid fa-tree"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Samaresh Majumdar</h4>
+                        <span class="text-xs font-bold text-gold-400 uppercase tracking-wider block mt-1">Political Realism & Tea Gardens</span>
+                        <p class="text-slate-300 text-xs font-bengali mt-3 leading-relaxed">
+                            উত্তরবঙ্গের অরণ্য, চা-বাগান, তিস্তা নদী, এবং রাজনৈতিক বিপ্লব ও সংগ্রামের এক অনন্য মহাকাব্যিক সমীকরণ।
+                        </p>
+                    </div>
+
+                    <!-- Shirshendu Matrix -->
+                    <div class="bg-navy-800/80 p-6 rounded-2xl border border-slate-700">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl mb-4">
+                            <i class="fa-solid fa-cloud-moon"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Shirshendu Mukhopadhyay</h4>
+                        <span class="text-xs font-bold text-gold-400 uppercase tracking-wider block mt-1">Surrealism & Human Warmth</span>
+                        <p class="text-slate-300 text-xs font-bengali mt-3 leading-relaxed">
+                            আধ্যাত্মিক চেতনা, অদ্ভুতুরে রসিকতা, মানব সম্পর্কের উষ্ণতা ও পারিবারিক বন্ধনের মনস্তাত্ত্বিক বাস্তবতা।
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Cinema, Adaptations & Documentaries -->
+        <section id="cinema" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-14">
+                <span class="text-gold-400 font-cinzel text-xs font-bold tracking-widest uppercase">Silver Screen Legacy</span>
+                <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-white mt-2">Cinema & Film Adaptations</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mt-3 font-bengali">
+                    তাদের কালোত্তীর্ণ উপন্যাস ও গল্প থেকে নির্মিত জনপ্রিয় চলচ্চিত্র ও ওয়েব সিরিজ।
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="cinemaGrid">
+                <!-- Injected via JS -->
+            </div>
+        </section>
+
+        <!-- 7. Video & Interview Media Hub (YouTube Playlist Megazone) -->
+        <section id="media-hub" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-navy-800/50 rounded-3xl border border-gold-500/10">
+            <div class="text-center mb-12">
+                <span class="text-gold-400 font-cinzel text-xs font-bold tracking-widest uppercase">Audio-Visual Archives</span>
+                <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-white mt-2">Interviews & Documentaries Hub</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mt-3 font-bengali">
+                    চারজন মহান কথাসাহিত্যিকের বিরল সাক্ষাৎকার, জীবনচিত্র ও আলোচনা সভা।
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main Featured Video Player Frame -->
+                <div class="lg:col-span-2 glass-card p-4 rounded-2xl">
+                    <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-black border border-slate-700">
+                        <iframe id="mainYoutubeIframe" class="w-full h-full" src="https://www.youtube-nocookie.com/embed/5qap5aO4i9A" title="Sunil Gangopadhyay Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="mt-4 p-2">
+                        <h3 id="currentVideoTitle" class="text-xl font-bold text-white font-bengali">সুনীল গঙ্গোপাধ্যায়ের বিরল সাক্ষাৎকার ও সাহিত্য আড্ডা</h3>
+                        <p id="currentVideoDesc" class="text-sm text-slate-400 mt-1 font-bengali">বাংলা সাহিত্যের স্বর্ণযুগ এবং কৃত্তিবাস পত্রিকা ও নিজের লেখালেখি নিয়ে মনখোলা আলোচনা।</p>
+                    </div>
+                </div>
+
+                <!-- Video Playlist Selector -->
+                <div class="glass-card p-4 rounded-2xl flex flex-col h-[450px] overflow-y-auto space-y-3" id="playlistContainer">
+                    <!-- Injected via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Interactive Quote & Philosophy Generator -->
+        <section id="quotes" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+            <span class="text-gold-400 font-cinzel text-xs font-bold tracking-widest uppercase">Words of Wisdom</span>
+            <h2 class="text-3xl sm:text-5xl font-cinzel font-bold text-white mt-2 mb-8">Quote & Philosophy Haven</h2>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8" id="quoteCategoryFilters">
+                <button data-cat="all" class="quote-filter-btn active px-4 py-2 rounded-full text-xs font-semibold bg-gold-500 text-navy-900">All Topics</button>
+                <button data-cat="life" class="quote-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-navy-800 text-slate-300 hover:text-white">Life & Destinies</button>
+                <button data-cat="love" class="quote-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-navy-800 text-slate-300 hover:text-white">Love & Emotion</button>
+                <button data-cat="nature" class="quote-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-navy-800 text-slate-300 hover:text-white">Nature & Solitude</button>
+                <button data-cat="writing" class="quote-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-navy-800 text-slate-300 hover:text-white">Writing Art</button>
+            </div>
+
+            <!-- Display Quote Card -->
+            <div class="glass-card p-8 sm:p-12 rounded-3xl relative border border-gold-500/30">
+                <i class="fa-solid fa-quote-left text-gold-500/20 text-6xl absolute top-6 left-6"></i>
+                <p id="displayQuoteText" class="text-xl sm:text-2xl text-slate-100 font-bengali italic relative z-10 leading-relaxed mb-6">
+                    "কেউ কথা রাখেনি, ৩৩ বছর কাটলো, কেউ কথা রাখে নি।"
+                </p>
+                <div id="displayQuoteAuthor" class="text-gold-400 font-bold font-bengali text-lg">
+                    — সুনীল গঙ্গোপাধ্যায় (Sunil Gangopadhyay)
+                </div>
+                <div id="displayQuoteTag" class="mt-2 inline-block px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 text-xs font-cinzel">
+                    TOPIC: LOVE & REGRET
+                </div>
+
+                <div class="mt-8 flex justify-center space-x-4">
+                    <button id="nextQuoteBtn" class="px-6 py-2.5 rounded-full bg-gold-500 text-navy-900 font-bold text-sm hover:bg-gold-400 transition-all">
+                        <i class="fa-solid fa-shuffle mr-2"></i> Random Quote
+                    </button>
+                    <button id="copyQuoteBtn" class="px-6 py-2.5 rounded-full glass-card border border-gold-500/40 text-white font-semibold text-sm hover:bg-navy-800 transition-all">
+                        <i class="fa-regular fa-copy mr-2"></i> Copy Quote
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Reader's Haven & Interactive Writing Sandbox -->
+        <section id="sandbox" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="glass-card p-6 sm:p-10 rounded-3xl border border-gold-500/30">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-6 border-b border-slate-700/60">
+                    <div>
+                        <span class="text-gold-400 font-cinzel text-xs font-bold tracking-widest uppercase">Make Yours Own Haven</span>
+                        <h2 class="text-2xl sm:text-4xl font-cinzel font-bold text-white mt-1">Reader's Writing Sanctuary</h2>
+                        <p class="text-slate-400 text-sm font-bengali mt-1">প্রকৃতির আবহ আর চার মহারথীর অনুপ্রেরণায় লিখুন আপনার নিজস্ব গল্প বা কবিতা।</p>
+                    </div>
+
+                    <!-- Ambient Sound Simulator Toggle -->
+                    <div class="mt-4 md:mt-0 flex items-center space-x-3 bg-navy-900/80 p-2.5 rounded-2xl border border-slate-700">
+                        <span class="text-xs font-bold text-gold-400 font-cinzel"><i class="fa-solid fa-tree-city mr-1"></i> Woods Ambient</span>
+                        <button id="ambientRainBtn" class="p-2 rounded-xl bg-navy-800 hover:bg-gold-500/20 text-slate-300 hover:text-gold-400 text-sm transition-all" title="Toggle Rain Sound">
+                            <i class="fa-solid fa-cloud-rain"></i> Rain
+                        </button>
+                        <button id="ambientForestBtn" class="p-2 rounded-xl bg-navy-800 hover:bg-gold-500/20 text-slate-300 hover:text-gold-400 text-sm transition-all" title="Toggle Forest Birds Sound">
+                            <i class="fa-solid fa-crow"></i> Birds
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Writing Workspace -->
+                <div class="space-y-4">
+                    <input type="text" id="storyTitle" placeholder="আপনার লেখার শিরোনাম (Title of Your Story)..." class="w-full px-5 py-3 rounded-xl bg-navy-900 border border-slate-700 text-white font-bengali focus:outline-none focus:border-gold-500 text-lg">
+                    
+                    <textarea id="storyContent" rows="10" placeholder="এখানে আপনার সাহিত্য রচনা শুরু করুন... (Start writing your own literature here)..." class="w-full px-5 py-4 rounded-xl bg-navy-900 border border-slate-700 text-white font-bengali focus:outline-none focus:border-gold-500 leading-relaxed text-base resize-y"></textarea>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 pt-2 gap-4">
+                        <div class="flex items-center space-x-4">
+                            <span>Words: <strong id="wordCounter" class="text-gold-400 font-mono">0</strong></span>
+                            <span>Characters: <strong id="charCounter" class="text-gold-400 font-mono">0</strong></span>
+                        </div>
+                        <div class="flex space-x-3 w-full sm:w-auto">
+                            <button id="clearStoryBtn" class="px-4 py-2 rounded-lg bg-navy-800 hover:bg-red-900/40 text-slate-300 transition-all flex-1 sm:flex-none">Clear</button>
+                            <button id="saveStoryBtn" class="px-6 py-2 rounded-lg bg-gold-500 text-navy-900 font-bold hover:bg-gold-400 transition-all flex-1 sm:flex-none">
+                                <i class="fa-solid fa-floppy-disk mr-1"></i> Save to Haven
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Saved Stories Section -->
+                <div class="mt-8 pt-6 border-t border-slate-700/60">
+                    <h4 class="text-sm font-bold text-gold-400 uppercase tracking-wider mb-3">Saved Drafts in Haven</h4>
+                    <div id="savedStoriesList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <p class="text-xs text-slate-500 italic font-bengali">কোনো সংরক্ষিত খসড়া নেই (No saved drafts yet).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Megazone Reference & Citation Directory -->
+        <section id="references" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="glass-card p-8 rounded-3xl border border-gold-500/20">
+                <div class="mb-8">
+                    <span class="text-gold-400 font-cinzel text-xs font-bold tracking-widest uppercase">Archive Directory</span>
+                    <h2 class="text-3xl font-cinzel font-bold text-white mt-1">Megazone Reference Directory</h2>
+                    <p class="text-slate-400 text-sm font-bengali mt-1">গ্রন্থপঞ্জি, সাহিত্য পুরস্কার, প্রকাশনা সংস্থা ও চলচ্চিত্র মহাফেজখানা।</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
+                    <!-- Column 1 -->
+                    <div>
+                        <h4 class="font-bold text-gold-400 mb-3 border-b border-gold-500/30 pb-1 font-cinzel">Major Literary Awards</h4>
+                        <ul class="space-y-2 text-slate-300 text-xs font-bengali">
+                            <li>• সাহিত্য আকাদেমি পুরস্কার (Sahitya Akademi)</li>
+                            <li>• আনন্দ পুরস্কার (Ananda Puraskar)</li>
+                            <li>• বাংলা একাডেমি সাহিত্য পুরস্কার</li>
+                            <li>• একুশে পদক ও স্বাধীনতা পুরস্কার</li>
+                            <li>• বঙ্কিম পুরস্কার ও নরসিংহ দাস পুরস্কার</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div>
+                        <h4 class="font-bold text-gold-400 mb-3 border-b border-gold-500/30 pb-1 font-cinzel">Prominent Publishers</h4>
+                        <ul class="space-y-2 text-slate-300 text-xs font-bengali">
+                            <li>• আনন্দ পাবলিশার্স (Ananda Publishers)</li>
+                            <li>• সময় প্রকাশন (Somoy Prokashan)</li>
+                            <li>• অন্যপ্রকাশ (Anyaprokash)</li>
+                            <li>• দে'জ পাবলিশিং (Dey's Publishing)</li>
+                            <li>• প্রথমা ও কাকলী প্রকাশনী</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div>
+                        <h4 class="font-bold text-gold-400 mb-3 border-b border-gold-500/30 pb-1 font-cinzel">Film Adaptations</h4>
+                        <ul class="space-y-2 text-slate-300 text-xs font-bengali">
+                            <li>• মনের মানুষ (পরিচালনা: গৌতম ঘোষ)</li>
+                            <li>• আগুনের পরশমণি (হুমায়ূন আহমেদ)</li>
+                            <li>• কালবেলা (পরিচালনা: বুদ্ধদেব দাশগুপ্ত)</li>
+                            <li>• হীরার আংটি (পরিচালনা: ঋতুপর্ণ ঘোষ)</li>
+                            <li>• দেবী & মিসির আলি ওয়েব সিরিজ</li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4 -->
+                    <div>
+                        <h4 class="font-bold text-gold-400 mb-3 border-b border-gold-500/30 pb-1 font-cinzel">Literary Magazines</h4>
+                        <ul class="space-y-2 text-slate-300 text-xs font-bengali">
+                            <li>• কৃত্তিবাস পত্রিকা (Krittibas)</li>
+                            <li>• দেশ পত্রিকা (Desh Magazine)</li>
+                            <li>• মেলা ও সাহিত্য সংখ্যা</li>
+                            <li>• নুহাশ চলচ্চিত্র মহাফেজখানা</li>
+                            <li>• অমর একুশে বইমেলা আর্কাইভ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Author Detail Slide-Over / Modal -->
+    <div id="authorModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="glass-card w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl border border-gold-500/40 p-6 sm:p-8 relative">
+            <button id="closeAuthorModal" class="absolute top-4 right-4 text-slate-400 hover:text-gold-400 text-2xl w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="authorModalContent">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Detail Modal -->
+    <div id="bookModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="glass-card w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl border border-gold-500/40 p-6 sm:p-8 relative">
+            <button id="closeBookModal" class="absolute top-4 right-4 text-slate-400 hover:text-gold-400 text-2xl w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="bookModalContent">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-gold-500/20 py-12 text-center text-xs text-slate-400 font-bengali">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-cinzel text-base text-gold-400 font-bold mb-2">WRITERS NEVER DIE</p>
+            <p class="mb-4 text-slate-300">"লেখা তৈরি করে স্বৰ্গ। গড়ো তোমার নিজের।" | Writing Makes Haven. Make Yours Own.</p>
+            <p class="text-slate-500">© Modern Bengali Literary Haven Archive. Celebrating Sunil Gangopadhyay, Humayun Ahmed, Samaresh Majumdar & Shirshendu Mukhopadhyay.</p>
+        </div>
+    </footer>
+
+    <!-- Audio Elements for Ambient Sounds (Synthesized / Web Audio Fallback) -->
+    <script>
+        // Web Audio API Ambient Sound Generator
+        class AmbientSoundPlayer {
+            constructor() {
+                this.ctx = null;
+                this.rainGain = null;
+                this.forestGain = null;
+                this.isRainPlaying = false;
+                this.isForestPlaying = false;
+            }
+
+            initCtx() {
+                if (!this.ctx) {
+                    this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+            }
+
+            toggleRain() {
+                this.initCtx();
+                if (this.isRainPlaying) {
+                    if (this.rainGain) this.rainGain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + 1);
+                    this.isRainPlaying = false;
+                    return false;
+                } else {
+                    // Create Rain Noise
+                    const bufferSize = this.ctx.sampleRate * 2;
+                    const noiseBuffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+                    const output = noiseBuffer.getChannelData(0);
+                    for (let i = 0; i < bufferSize; i++) {
+                        output[i] = Math.random() * 2 - 1;
+                    }
+                    const whiteNoise = this.ctx.createBufferSource();
+                    whiteNoise.buffer = noiseBuffer;
+                    whiteNoise.loop = true;
+
+                    const filter = this.ctx.createBiquadFilter();
+                    filter.type = 'lowpass';
+                    filter.frequency.setValueAtTime(1000, this.ctx.currentTime);
+
+                    this.rainGain = this.ctx.createGain();
+                    this.rainGain.gain.setValueAtTime(0.01, this.ctx.currentTime);
+                    this.rainGain.gain.exponentialRampToValueAtTime(0.15, this.ctx.currentTime + 1);
+
+                    whiteNoise.connect(filter);
+                    filter.connect(this.rainGain);
+                    this.rainGain.connect(this.ctx.destination);
+
+                    whiteNoise.start();
+                    this.isRainPlaying = true;
+                    return true;
+                }
+            }
+
+            toggleForest() {
+                this.initCtx();
+                if (this.isForestPlaying) {
+                    if (this.forestGain) this.forestGain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + 1);
+                    this.isForestPlaying = false;
+                    return false;
+                } else {
+                    // Create Gentle Wind/Forest ambience
+                    const bufferSize = this.ctx.sampleRate * 2;
+                    const noiseBuffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+                    const output = noiseBuffer.getChannelData(0);
+                    for (let i = 0; i < bufferSize; i++) {
+                        output[i] = Math.random() * 2 - 1;
+                    }
+                    const windNoise = this.ctx.createBufferSource();
+                    windNoise.buffer = noiseBuffer;
+                    windNoise.loop = true;
+
+                    const filter = this.ctx.createBiquadFilter();
+                    filter.type = 'bandpass';
+                    filter.frequency.setValueAtTime(400, this.ctx.currentTime);
+
+                    this.forestGain = this.ctx.createGain();
+                    this.forestGain.gain.setValueAtTime(0.01, this.ctx.currentTime);
+                    this.forestGain.gain.exponentialRampToValueAtTime(0.08, this.ctx.currentTime + 1);
+
+                    windNoise.connect(filter);
+                    filter.connect(this.forestGain);
+                    this.forestGain.connect(this.ctx.destination);
+
+                    windNoise.start();
+                    this.isForestPlaying = true;
+                    return true;
+                }
+            }
+        }
+
+        const ambientSound = new AmbientSoundPlayer();
+    </script>
+
+    <!-- Main Interactive Script -->
+    <script>
+        // --- DATA STORE ---
+
+        // Author Wiki Data
+        const authorsData = [
+            {
+                id: 'sunil',
+                nameEn: 'Sunil Gangopadhyay',
+                nameBn: 'সুনীল গঙ্গোপাধ্যায়',
+                tagline: 'The Epic Historian & Romantic Poet',
+                homeland: 'Faridpur (Origin) & Kolkata, Bengal',
+                style: 'Urban Romanticism, Historical Realism, Poetic Prose',
+                partner: 'Swati Gangopadhyay',
+                favouriteColor: 'Deep Royal Blue & Midnight Black',
+                hobbies: 'Traveling across rivers, Reciting Poetry, Archiving History, Literary Debates',
+                philosophyWomenNature: 'Women in Sunil\'s work represent liberation, mystery, and deep romantic dignity (Neera). Nature is a silent witness to human solitude and historical tides.',
+                inspiration: 'Michael Madhusudan Dutt, Rabindranath Tagore, French Surrealist Poets',
+                awards: 'Sahitya Akademi Award, Ananda Puraskar, Bankim Puraskar',
+                bookCount: '300+ Books (Poetry, Novels, Travelogues)',
+                readersCount: '15 Million+',
+                iconBg: 'from-amber-500/20 to-burgundy-700/30',
+                imageSvg: `<svg class="w-full h-full text-gold-400" viewBox="0 0 100 100" fill="currentColor"><path d="M50 15c-12 0-22 10-22 22 0 15 12 25 22 38 10-13 22-23 22-38 0-12-10-22-22-22zm0 30c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/></svg>`,
+                bio: 'সুনীল গঙ্গোপাধ্যায় (Sunil Gangopadhyay) বাংলা সাহিত্যের এক বরপুত্র। কৃত্তিবাস পত্রিকার সম্পাদক হিসেবে কাব্যআন্দোলনের জনক। নীললোহিত ছদ্মনামে তরুণের হৃদস্পন্দন এবং ‘সেই সময়’ ও ‘প্রথম আলো’ উপন্যাসের মাধ্যমে উনিশ শতকের ইতিহাসকে জীবন্ত করেছেন।'
+            },
+            {
+                id: 'humayun',
+                nameEn: 'Humayun Ahmed',
+                nameBn: 'হুমায়ূন আহমেদ',
+                tagline: 'The Wizard of Magical Realism & Emotion',
+                homeland: 'Kutubpur, Mymensingh / Nuhash Polli, Bangladesh',
+                style: 'Magical Realism, Emotional Simplicity, Psychological Mystery',
+                partner: 'Meher Afroz Shaon',
+                favouriteColor: 'Yellow (Himu\'s Punjabi) & Moonlight Silver',
+                hobbies: 'Gardening at Nuhash Polli, Filmmaking, Astronomy, Stargazing under Rain',
+                philosophyWomenNature: 'Nature is a living magic—rain and full moon possess soul. Women are resilient, deeply forgiving, and possess subtle emotional strength.',
+                inspiration: 'Gabriel García Márquez, American Literature, Riverine Nature of Bengal',
+                awards: 'Ekushey Padak, Bangla Academy Literary Award, National Film Awards',
+                bookCount: '250+ Books',
+                readersCount: '25 Million+',
+                iconBg: 'from-yellow-500/20 to-emerald-700/30',
+                imageSvg: `<svg class="w-full h-full text-yellow-400" viewBox="0 0 100 100" fill="currentColor"><circle cx="50" cy="50" r="30"/><path d="M50 10v10M50 80v10M10 50h10M80 50h10"/></svg>`,
+                bio: 'হুমায়ূন আহমেদ (Humayun Ahmed) আধুনিক বাংলা সাহিত্যের সবচেয়ে জনপ্রিয় কথাসাহিত্যিক, নাট্যকার ও চলচ্চিত্র নির্মাতা। হিমু ও মিসির আলি চরিত্রের মাধ্যমে তিনি কয়েক প্রজন্মকে পাঠাভ্যাসে বুঁদ করে রেখেছেন।'
+            },
+            {
+                id: 'samaresh',
+                nameEn: 'Samaresh Majumdar',
+                nameBn: 'সমরেশ মজুমদার',
+                tagline: 'The Chronicler of Rebellion & Tea Gardens',
+                homeland: 'Jalpaiguri, Duars, North Bengal',
+                style: 'Political Realism, Social Thriller, Epic Triology',
+                partner: 'Sreemati Majumdar',
+                favouriteColor: 'Forest Green & Earthy Terracotta',
+                hobbies: 'Exploring North Bengal Tea Gardens, Watching Football, Political Discussions',
+                philosophyWomenNature: 'Women (Deepa, Madhabilata) are the ultimate symbols of courage and unconditional sacrifice. Nature (Duars forests) is wild, fierce, and nurturing.',
+                inspiration: 'Subhash Chandra Bose, Naxalite Movement, Tea Garden Life',
+                awards: 'Sahitya Akademi Award, Ananda Puraskar, Bankim Puraskar',
+                bookCount: '200+ Books',
+                readersCount: '12 Million+',
+                iconBg: 'from-emerald-500/20 to-blue-700/30',
+                imageSvg: `<svg class="w-full h-full text-emerald-400" viewBox="0 0 100 100" fill="currentColor"><path d="M50 10L20 80h60z"/></svg>`,
+                bio: 'সমরেশ মজুমদার (Samaresh Majumdar) উত্তরবঙ্গের চা-বাগান এবং সত্তরের রাজনৈতিক উত্তাল সময়ের অমর রূপকার। ‘কালবেলা’ ও ‘সাতকাহন’ উপন্যাসের অনিমেষ, মাধবীলতা ও দীপাবলি চরিত্র বাঙালি মানসে চিরভাস্বর।'
+            },
+            {
+                id: 'shirshendu',
+                nameEn: 'Shirshendu Mukhopadhyay',
+                nameBn: 'শীর্ষেন্দু মুখোপাধ্যায়',
+                tagline: 'The Master of Human Warmth & Spiritual Surrealism',
+                homeland: 'Mymensingh (Origin) & Kolkata, Bengal',
+                style: 'Surrealism, Soulful Humor, Children Magic & Spiritual Realism',
+                partner: 'Supriti Mukhopadhyay',
+                favouriteColor: 'Sunset Orange & Soothing White',
+                hobbies: 'Spiritual Meditation, Cooking, Writing Ghost Fables for Children, Chess',
+                philosophyWomenNature: 'Human nature is inherently good; flaws are mere shadows. Nature is filled with friendly spirits, innocence, and divine tranquility.',
+                inspiration: 'Thakur Anukulchandra, Everyday Common Folk of Bengal',
+                awards: 'Sahitya Akademi Award, Ananda Puraskar, Banga Bibhushan',
+                bookCount: '180+ Books',
+                readersCount: '10 Million+',
+                iconBg: 'from-purple-500/20 to-pink-700/30',
+                imageSvg: `<svg class="w-full h-full text-purple-400" viewBox="0 0 100 100" fill="currentColor"><circle cx="50" cy="40" r="25"/><path d="M25 75c0-15 12-20 25-20s25 5 25 20z"/></svg>`,
+                bio: 'শীর্ষেন্দু মুখোপাধ্যায় (Shirshendu Mukhopadhyay) বাংলা সাহিত্যে অনন্য মেজাজের স্রষ্টা। একদিকে ‘ঘুণপোকা’ ও ‘পার্থিব’-র মতো গহীন মনস্তাত্ত্বিক উপন্যাস, অন্যদিকে গোসাইবাগানের ভূতের মতো অতুলনীয় কিশোর সাহিত্য।'
+            }
+        ];
+
+        // 20 Featured Books Showcase Data
+        const booksData = [
+            // Sunil Gangopadhyay (5)
+            { id: 1, authorId: 'sunil', titleEn: 'Sei Samoy', titleBn: 'সেই সময়', year: 1981, publisher: 'Ananda Publishers', genre: 'Historical Epic', desc: '১৯ শতকের কলকাতার নবজাগরণ, ঈশ্বরচন্দ্র বিদ্যাসাগর, মাইকেল মধুসূদন ও ধনী বাবু কালচারের নিখুঁত মহাকাব্যিক বিবরণ।', gradient: 'from-amber-600 to-navy-900' },
+            { id: 2, authorId: 'sunil', titleEn: 'Prothom Alo', titleBn: 'প্রথম আলো', year: 1996, publisher: 'Ananda Publishers', genre: 'Historical Epic', desc: 'রবীন্দ্রনাথ ঠাকুরের বিকাশকাল এবং ত্রিপুরা রাজপরিবার ও তৎকালীন ভারতের রাজনৈতিক-সাংস্কৃতিক প্রেক্ষাপট।', gradient: 'from-amber-500 to-burgundy-900' },
+            { id: 3, authorId: 'sunil', titleEn: 'Moner Manush', titleBn: 'মনের মানুষ', year: 2008, publisher: 'Ananda Publishers', genre: 'Biographical Novel', desc: 'মর্মী সাধক লালন ফকিরের জীবন, দর্শন ও বাউল চেতনার ওপর ভিত্তি করে রচিত উপন্যাস।', gradient: 'from-yellow-600 to-slate-900' },
+            { id: 4, authorId: 'sunil', titleEn: 'Sabuj Dweeper Raja', titleBn: 'সবুজ দ্বীপের রাজা', year: 1978, publisher: 'Ananda Publishers', genre: 'Kakababu Adventure', desc: 'কাকাবাবু (রাজা রায়চৌধুরী) ও সন্তুর আন্দামান দ্বীপপুঞ্জের রহস্যময় অভিযান।', gradient: 'from-emerald-600 to-navy-900' },
+            { id: 5, authorId: 'sunil', titleEn: 'Nihsanga Samrat', titleBn: 'নিঃসঙ্গ সম্রাট', year: 2005, publisher: 'Ananda Publishers', genre: 'Biographical Classic', desc: 'নাট্যাচার্য শিশির কুমার ভাদুড়ীর বর্ণময় ও নিঃসঙ্গ জীবনের নিখুঁত আখ্যান।', gradient: 'from-purple-700 to-navy-900' },
+
+            // Humayun Ahmed (5)
+            { id: 6, authorId: 'humayun', titleEn: 'Nondito Noroke', titleBn: 'নন্দিত নরকে', year: 1972, publisher: 'Khan Brothers / Somoy', genre: 'Psychological Family Drama', desc: 'হুমায়ূন আহমেদের প্রথম উপন্যাস। মধ্যবিত্ত পরিবারের আনন্দ-বেদনা ও পারিবারিক সম্পর্কের অনন্য দলিল।', gradient: 'from-blue-600 to-burgundy-900' },
+            { id: 7, authorId: 'humayun', titleEn: 'Shonkhonil Karagar', titleBn: 'শঙ্খনীল কারাগার', year: 1973, publisher: 'Somoy Prokashan', genre: 'Social Drama', desc: 'মধ্যবিত্ত জীবনের জটিলতা, ত্যাগ ও অনুভূতির কোমল ছোঁয়া।', gradient: 'from-cyan-600 to-navy-900' },
+            { id: 8, authorId: 'humayun', titleEn: 'Deyal', titleBn: 'দেয়াল', year: 2013, publisher: 'Anyaprokash', genre: 'Political History', desc: 'বাংলাদেশের স্বাধীনতা পরবর্তী রাজনৈতিক প্রেক্ষাপট ও ১৯৭৫-এর নির্মম ইতিহাস নির্ভর উপন্যাস।', gradient: 'from-red-700 to-slate-900' },
+            { id: 9, authorId: 'humayun', titleEn: 'Devi (Misir Ali)', titleBn: 'দেবী (মিসির আলি)', year: 1985, publisher: 'Anupam Prokashani', genre: 'Paranormal Mystery', desc: 'মনোবিজ্ঞানী মিসির আলির প্রথম আত্মপ্রকাশ এবং রানু চরিত্রকে ঘিরে রহস্যময় ঘটনা।', gradient: 'from-slate-700 to-purple-900' },
+            { id: 10, authorId: 'humayun', titleEn: 'Moyurakshi (Himu)', titleBn: 'ময়ূরাক্ষী (হিমু)', year: 1990, publisher: 'Ananya', genre: 'Magical Realism', desc: 'হলুদ পাঞ্জাবি পরা বেকার তরুণ হিমু এবং তার অ্যান্টি-লজিক জীবনের প্রথম কালজয়ী উপন্যাস।', gradient: 'from-yellow-500 to-emerald-900' },
+
+            // Samaresh Majumdar (5)
+            { id: 11, authorId: 'samaresh', titleEn: 'Uttaradhikar', titleBn: 'উত্তরাধিকার', year: 1979, publisher: 'Ananda Publishers', genre: 'Trilogy Part 1', desc: 'চা-বাগান থেকে শুরু করে বালক অনিমেষের বেড়ে ওঠা ও জলপাইগুড়ির পরিবেশ।', gradient: 'from-emerald-700 to-navy-900' },
+            { id: 12, authorId: 'samaresh', titleEn: 'Kalbela', titleBn: 'কালবেলা', year: 1983, publisher: 'Ananda Publishers', genre: 'Political Epic (Sahitya Akademi)', desc: 'সত্তরের দশকের রাজনৈতিক নকশাল আন্দোলন, কলকাতা এবং অনিমেষ-মাধবীলতার অমর প্রেম।', gradient: 'from-red-600 to-navy-900' },
+            { id: 13, authorId: 'samaresh', titleEn: 'Kalpurush', titleBn: 'কালপুরুষ', year: 1989, publisher: 'Ananda Publishers', genre: 'Trilogy Part 3', desc: 'অনিমেষ ও মাধবীলতার সন্তান অর্কের আত্মপ্রকাশ এবং পরিবর্তিত সমাজের কথা।', gradient: 'from-blue-700 to-slate-900' },
+            { id: 14, authorId: 'samaresh', titleEn: 'Saatkahon', titleBn: 'সাতকাহন', year: 1988, publisher: 'Ananda Publishers', genre: 'Feminist Epic', desc: 'উত্তরবঙ্গের বিপ্লবী ও আত্মমর্যাদাশীল নারী দীপাবলির সংগ্রাম ও জয়গাথা।', gradient: 'from-amber-600 to-burgundy-900' },
+            { id: 15, authorId: 'samaresh', titleEn: 'Arjun (Kalimpong)', titleBn: 'মেজর ও অর্জুন', year: 1984, publisher: 'Ananda Publishers', genre: 'Detective / Mystery', desc: 'কালিম্পংয়ের অরণ্য ও পাহাড়ের প্রেক্ষাপটে সত্যান্বেষী অর্জুনের রোমাঞ্চকর অভিযান।', gradient: 'from-teal-600 to-navy-900' },
+
+            // Shirshendu Mukhopadhyay (5)
+            { id: 16, authorId: 'shirshendu', titleEn: 'Ghunpoka', titleBn: 'ঘুণপোকা', year: 1967, publisher: 'Ananda Publishers', genre: 'Psychological Realism', desc: 'শ্যাম চরিত্রের জীবনের টানাপোড়েন ও মধ্যবিত্ত অস্তিত্বের সংকটের নিখুঁত আখ্যান।', gradient: 'from-purple-800 to-navy-900' },
+            { id: 17, authorId: 'shirshendu', titleEn: 'Parthibo', titleBn: 'পার্থিব', year: 1985, publisher: 'Ananda Publishers', genre: 'Social Philosophical Epic', desc: 'বিশাল ক্যানভাসে বিস্তৃত গ্রাম ও শহরের মানুষের জীবনরস ও আধ্যাত্মিক যাত্রার উপন্যাস।', gradient: 'from-blue-800 to-emerald-900' },
+            { id: 18, authorId: 'shirshendu', titleEn: 'Manabzamin', titleBn: 'মানবজমিন', year: 1988, publisher: 'Ananda Publishers', genre: 'Classic (Sahitya Akademi)', desc: 'মানুষের অন্তরাত্মার নৈতিকতা ও সম্পর্কের জটিলতার অনন্য মাস্টারপিস।', gradient: 'from-amber-700 to-navy-900' },
+            { id: 19, authorId: 'shirshendu', titleEn: 'Nabiganj', titleBn: 'নবীগঞ্জ', year: 1999, publisher: 'Dey\'s Publishing', genre: 'Rural Life Drama', desc: 'গ্রাম বাংলার সাধারণ মানুষের জীবন সংগ্রাম ও সহজাত সরলতার উপস্থাপন।', gradient: 'from-green-700 to-slate-900' },
+            { id: 20, authorId: 'shirshendu', titleEn: 'Goshaibaganer Bhoot', titleBn: 'গোসাইবাগানের ভূত', year: 1979, publisher: 'Ananda Publishers', genre: 'Children Phantom Magic', desc: 'বুরুন ও ভালো ভূত হাবু সরদারের অম্লমধুর মজার কিশোর অভিযান।', gradient: 'from-pink-600 to-purple-900' }
+        ];
+
+        // Film Adaptations Data
+        const cinemaData = [
+            { title: 'Aguner Porashmoni', director: 'Humayun Ahmed', year: '1994', author: 'Humayun Ahmed', icon: 'fa-film', badge: 'National Film Award Winner' },
+            { title: 'Moner Manush', director: 'Goutam Ghose', year: '2010', author: 'Sunil Gangopadhyay', icon: 'fa-clapperboard', badge: 'Golden Peacock Award' },
+            { title: 'Kalbela', director: 'Buddhadeb Dasgupta', year: '2009', author: 'Samaresh Majumdar', icon: 'fa-video', badge: 'Classic Political Cinema' },
+            { title: 'Hirer Angti', director: 'Rituparno Ghosh', year: '1992', author: 'Shirshendu Mukhopadhyay', icon: 'fa-masks-theater', badge: 'Arthouse Masterpiece' },
+            { title: 'Devi (Movie)', director: 'Anam Biswas', year: '2018', author: 'Humayun Ahmed', icon: 'fa-ghost', badge: 'Misir Ali Supernatural' },
+            { title: 'Sabuj Dweeper Raja', director: 'Tapan Sinha', year: '1979', author: 'Sunil Gangopadhyay', icon: 'fa-compass', badge: 'Kakababu Adventure' },
+            { title: 'Buno Haansh', director: 'Aniruddha Roy Chowdhury', year: '2014', author: 'Samaresh Majumdar', icon: 'fa-plane', badge: 'Crime Thriller Drama' },
+            { title: 'Goynar Baksho', director: 'Aparna Sen', year: '2013', author: 'Shirshendu Mukhopadhyay', icon: 'fa-gem', badge: 'Spooky Comedy Classic' }
+        ];
+
+        // YouTube Media Playlist Data
+        const youtubeVideos = [
+            { id: '5qap5aO4i9A', title: 'সুনীল গঙ্গোপাধ্যায়ের বিরল সাক্ষাৎকার ও জীবন কথা', author: 'Sunil Gangopadhyay', desc: 'কৃত্তিবাস পত্রিকা এবং সাহিত্য জীবন নিয়ে বিস্তৃত আড্ডা।' },
+            { id: '1T68Yj260jM', title: 'হুমায়ূন আহমেদ এর শেষ সাক্ষাৎকার ও নুহাশ পল্লীর গল্প', author: 'Humayun Ahmed', desc: 'নিজের লেখালেখি ও জীবনদর্শন নিয়ে মনখোলা আলোচনা।' },
+            { id: 'a4zM4G2yU1k', title: 'সমরেশ মজুমদারের সাথে একান্ত সাক্ষাৎকার - কালবেলা ও অন্যান্য', author: 'Samaresh Majumdar', desc: 'উত্তরবঙ্গ, চা বাগান এবং অনিমেষ-মাধবীলতা সৃষ্টির পেছনের কথা।' },
+            { id: '36Zt7Q4J9aM', title: 'শীর্ষেন্দু মুখোপাধ্যায়ের জীবনবোধ ও সাহিত্য আলাপ', author: 'Shirshendu Mukhopadhyay', desc: 'আধ্যাত্মিক ভাবনা, ভূত ও ছোটদের গল্প লেখার রসদ।' }
+        ];
+
+        // Quotes Data
+        const quotesData = [
+            { text: "কেউ কথা রাখেনি, ৩৩ বছর কাটলো, কেউ কথা রাখে নি।", author: "Sunil Gangopadhyay", cat: "love" },
+            { text: "মানুষ মরে গেলে পচে যায়, বেঁচে থাকলে বদলায়।", author: "Munier / Humayun Ahmed", cat: "life" },
+            { text: "যে নদী তার নদীত্ব হারিয়ে ফেলে, সে আর সাগর খুঁজে পায় না।", author: "Samaresh Majumdar", cat: "nature" },
+            { text: "মানুষের কষ্ট পাওয়ার মূল কারণ হলো অতিরিক্ত প্রত্যাশা।", author: "Shirshendu Mukhopadhyay", cat: "life" },
+            { text: "জোছনা পরিমাপ করার কোনো যন্ত্র মানুষের হাতে নেই।", author: "Humayun Ahmed", cat: "nature" },
+            { text: "প্রেম মানেই এক নিঃসঙ্গতা থেকে আরেক নিঃসঙ্গতায় ঝাঁপ দেওয়া।", author: "Sunil Gangopadhyay", cat: "love" },
+            { text: "বিপ্লব কখনো কারো একা দিয়ে হয় না, আবার সবাই মিলেও শুরু করতে পারে না।", author: "Samaresh Majumdar", cat: "writing" },
+            { text: "দুঃখকে সহ্য করতে শিখলে দুঃখই একদিন সবচেয়ে বড় বন্ধু হয়ে যায়।", author: "Shirshendu Mukhopadhyay", cat: "life" },
+            { text: "চান্নিপসর রাতে কিছু মানুষ বোকা হয়ে যায়, আর কিছু মানুষ লেখক হয়ে যায়।", author: "Humayun Ahmed", cat: "writing" }
+        ];
+
+
+        // --- UI RENDER FUNCTIONS ---
+
+        // 1. Render Author Profile Cards
+        function renderAuthorCards() {
+            const container = document.getElementById('authorCardsGrid');
+            container.innerHTML = authorsData.map(author => `
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 group">
+                    <div>
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br ${author.iconBg} p-3 mb-5 border border-gold-500/30 group-hover:scale-110 transition-transform">
+                            ${author.imageSvg}
+                        </div>
+                        <h3 class="text-xl font-bold text-white font-cinzel">${author.nameEn}</h3>
+                        <p class="text-gold-400 font-bengali text-sm font-semibold mb-2">${author.nameBn}</p>
+                        <p class="text-slate-400 text-xs italic mb-4 font-sans">${author.tagline}</p>
+                        <p class="text-slate-300 text-xs font-bengali line-clamp-3 leading-relaxed mb-4">${author.bio}</p>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-700/60">
+                        <div class="text-[11px] text-slate-400 font-bengali mb-3">
+                            <span class="block"><strong>Homeland:</strong> ${author.homeland}</span>
+                            <span class="block mt-0.5"><strong>Style:</strong> ${author.style}</span>
+                        </div>
+                        <button onclick="openAuthorModal('${author.id}')" class="w-full py-2.5 rounded-xl bg-gold-500/10 hover:bg-gold-500 text-gold-300 hover:text-navy-900 border border-gold-500/30 text-xs font-bold transition-all flex items-center justify-center space-x-2">
+                            <span>Read Full Wiki</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 2. Render Books Grid
+        function renderBooksGrid(filter = 'all') {
+            const container = document.getElementById('booksGrid');
+            const filtered = filter === 'all' ? booksData : booksData.filter(b => b.authorId === filter);
+
+            container.innerHTML = filtered.map(book => {
+                const author = authorsData.find(a => a.id === book.authorId);
+                return `
+                    <div onclick="openBookModal(${book.id})" class="glass-card rounded-2xl p-4 flex flex-col justify-between cursor-pointer book-3d group">
+                        <div class="w-full aspect-[2/3] rounded-xl bg-gradient-to-br ${book.gradient} p-4 flex flex-col justify-between border border-gold-500/20 shadow-lg relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-16 h-16 bg-white/5 rounded-full blur-xl"></div>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-black/40 text-gold-300 backdrop-blur w-fit font-cinzel">${book.year}</span>
+                            <div>
+                                <span class="text-[10px] text-slate-300 font-bengali uppercase tracking-wider block">${author.nameBn}</span>
+                                <h4 class="text-lg font-bold text-white font-bengali leading-tight mt-1 group-hover:text-gold-300 transition-colors">${book.titleBn}</h4>
+                                <p class="text-[11px] text-slate-300 font-cinzel italic mt-0.5">${book.titleEn}</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <span class="text-[10px] text-gold-400 font-cinzel font-semibold uppercase block">${book.genre}</span>
+                            <div class="flex items-center justify-between text-[11px] text-slate-400 mt-1">
+                                <span>${book.publisher}</span>
+                                <i class="fa-solid fa-circle-info text-gold-500 group-hover:scale-125 transition-transform"></i>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // 3. Render Cinema Grid
+        function renderCinemaGrid() {
+            const container = document.getElementById('cinemaGrid');
+            container.innerHTML = cinemaData.map(item => `
+                <div class="glass-card p-5 rounded-2xl border border-slate-700/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="p-2.5 rounded-xl bg-gold-500/10 text-gold-400 text-lg"><i class="fa-solid ${item.icon}"></i></span>
+                            <span class="text-[10px] font-bold px-2 py-1 rounded bg-navy-800 text-gold-400 border border-gold-500/30">${item.year}</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white font-bengali">${item.title}</h4>
+                        <p class="text-xs text-slate-400 mt-1">Dir: ${item.director}</p>
+                        <p class="text-xs text-gold-300 font-bengali mt-0.5">মূল রচনা: ${item.author}</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/50">
+                        <span class="text-[10px] font-semibold text-slate-400 font-cinzel"><i class="fa-solid fa-award mr-1 text-gold-400"></i> ${item.badge}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 4. Render Video Playlist
+        function renderVideoPlaylist() {
+            const container = document.getElementById('playlistContainer');
+            container.innerHTML = youtubeVideos.map((vid, index) => `
+                <div onclick="selectVideo('${vid.id}', '${vid.title.replace(/'/g, "\\'")}', '${vid.desc.replace(/'/g, "\\'")}')" class="p-3 rounded-xl bg-navy-900/80 border border-slate-700/60 hover:border-gold-500/50 cursor-pointer transition-all flex space-x-3 items-center group">
+                    <div class="w-12 h-12 rounded-lg bg-red-600/20 text-red-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                        <i class="fa-brands fa-youtube text-xl"></i>
+                    </div>
+                    <div>
+                        <h5 class="text-xs font-bold text-white font-bengali group-hover:text-gold-400 transition-colors line-clamp-1">${vid.title}</h5>
+                        <p class="text-[10px] text-gold-400 font-cinzel">${vid.author}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function selectVideo(id, title, desc) {
+            document.getElementById('mainYoutubeIframe').src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1`;
+            document.getElementById('currentVideoTitle').innerText = title;
+            document.getElementById('currentVideoDesc').innerText = desc;
+        }
+
+        // 5. Author Modal Logic
+        function openAuthorModal(authorId) {
+            const author = authorsData.find(a => a.id === authorId);
+            if (!author) return;
+
+            const modalContent = document.getElementById('authorModalContent');
+            modalContent.innerHTML = `
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="w-full md:w-1/3 glass-card p-6 rounded-2xl text-center border border-gold-500/30">
+                        <div class="w-24 h-24 mx-auto rounded-2xl bg-gradient-to-br ${author.iconBg} p-4 mb-4">
+                            ${author.imageSvg}
+                        </div>
+                        <h3 class="text-2xl font-bold text-white font-cinzel">${author.nameEn}</h3>
+                        <p class="text-gold-400 font-bengali font-semibold text-lg">${author.nameBn}</p>
+                        <p class="text-xs text-slate-400 mt-1 italic">${author.tagline}</p>
+                        
+                        <div class="mt-6 pt-4 border-t border-slate-700/60 text-left space-y-2 text-xs">
+                            <div><strong class="text-gold-400">Homeland:</strong> <span class="text-slate-200">${author.homeland}</span></div>
+                            <div><strong class="text-gold-400">Partner / Spouse:</strong> <span class="text-slate-200">${author.partner}</span></div>
+                            <div><strong class="text-gold-400">Favourite Color:</strong> <span class="text-slate-200">${author.favouriteColor}</span></div>
+                            <div><strong class="text-gold-400">Books Written:</strong> <span class="text-slate-200">${author.bookCount}</span></div>
+                            <div><strong class="text-gold-400">Reader Reach:</strong> <span class="text-slate-200">${author.readersCount}</span></div>
+                        </div>
+                    </div>
+
+                    <div class="w-full md:w-2/3 space-y-4">
+                        <div>
+                            <h4 class="text-sm font-bold text-gold-400 font-cinzel uppercase tracking-wider">Biography & Soul</h4>
+                            <p class="text-sm text-slate-200 font-bengali leading-relaxed mt-1">${author.bio}</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-bold text-gold-400 font-cinzel uppercase tracking-wider">Writing Style & Technique</h4>
+                            <p class="text-xs text-slate-300 mt-1">${author.style}</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-bold text-gold-400 font-cinzel uppercase tracking-wider">Philosophy on Women & Nature</h4>
+                            <p class="text-xs text-slate-300 font-bengali mt-1 leading-relaxed">${author.philosophyWomenNature}</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-bold text-gold-400 font-cinzel uppercase tracking-wider">Hobbies & Passions</h4>
+                            <p class="text-xs text-slate-300 mt-1">${author.hobbies}</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-bold text-gold-400 font-cinzel uppercase tracking-wider">Major Awards & Recognition</h4>
+                            <p class="text-xs text-slate-300 font-bengali mt-1">${author.awards}</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-sm font-bold text-gold-400 font-cinzel uppercase tracking-wider">Inspirations</h4>
+                            <p class="text-xs text-slate-300 mt-1">${author.inspiration}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            const modal = document.getElementById('authorModal');
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.remove('opacity-0'), 10);
+        }
+
+        // 6. Book Modal Logic
+        function openBookModal(bookId) {
+            const book = booksData.find(b => b.id === bookId);
+            if (!book) return;
+            const author = authorsData.find(a => a.id === book.authorId);
+
+            const modalContent = document.getElementById('bookModalContent');
+            modalContent.innerHTML = `
+                <div class="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+                    <div class="w-44 h-64 shrink-0 rounded-2xl bg-gradient-to-br ${book.gradient} p-4 flex flex-col justify-between border border-gold-500/40 shadow-2xl">
+                        <span class="text-xs font-bold px-2.5 py-1 rounded bg-black/40 text-gold-300 w-fit font-cinzel">${book.year}</span>
+                        <div>
+                            <span class="text-xs text-slate-300 font-bengali">${author.nameBn}</span>
+                            <h3 class="text-xl font-bold text-white font-bengali leading-tight mt-1">${book.titleBn}</h3>
+                            <p class="text-xs text-slate-300 font-cinzel italic">${book.titleEn}</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <span class="text-xs font-bold px-3 py-1 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/30 uppercase tracking-wider font-cinzel">${book.genre}</span>
+                        <h2 class="text-2xl font-bold text-white font-bengali">${book.titleBn} (${book.titleEn})</h2>
+                        <p class="text-xs font-semibold text-gold-400 font-bengali">লেখক: ${author.nameBn} (${author.nameEn})</p>
+                        
+                        <div class="pt-2">
+                            <h4 class="text-xs font-bold text-slate-400 uppercase font-cinzel">Publisher & Release</h4>
+                            <p class="text-xs text-slate-200 mt-0.5">${book.publisher} • First Edition ${book.year}</p>
+                        </div>
+
+                        <div class="pt-2">
+                            <h4 class="text-xs font-bold text-slate-400 uppercase font-cinzel">Synopsis & Literary Value</h4>
+                            <p class="text-sm text-slate-300 font-bengali leading-relaxed mt-1">${book.desc}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            const modal = document.getElementById('bookModal');
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.remove('opacity-0'), 10);
+        }
+
+        // Close Modals Logic
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('opacity-0');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+
+        // 7. Interactive Quote Generator Logic
+        let currentQuotesList = [...quotesData];
+        function displayRandomQuote() {
+            if (currentQuotesList.length === 0) currentQuotesList = [...quotesData];
+            const randomIndex = Math.floor(Math.random() * currentQuotesList.length);
+            const q = currentQuotesList[randomIndex];
+
+            document.getElementById('displayQuoteText').innerText = `"${q.text}"`;
+            document.getElementById('displayQuoteAuthor').innerText = `— ${q.author}`;
+            document.getElementById('displayQuoteTag').innerText = `TOPIC: ${q.cat.toUpperCase()}`;
+        }
+
+        // 8. Reader's Writing Sandbox Logic
+        function initSandbox() {
+            const titleInput = document.getElementById('storyTitle');
+            const contentInput = document.getElementById('storyContent');
+            const wordCounter = document.getElementById('wordCounter');
+            const charCounter = document.getElementById('charCounter');
+            const saveBtn = document.getElementById('saveStoryBtn');
+            const clearBtn = document.getElementById('clearStoryBtn');
+            const savedContainer = document.getElementById('savedStoriesList');
+
+            function updateCounters() {
+                const text = contentInput.value.trim();
+                charCounter.innerText = text.length;
+                wordCounter.innerText = text ? text.split(/\s+/).length : 0;
+            }
+
+            contentInput.addEventListener('input', updateCounters);
+
+            clearBtn.addEventListener('click', () => {
+                titleInput.value = '';
+                contentInput.value = '';
+                updateCounters();
+            });
+
+            saveBtn.addEventListener('click', () => {
+                const title = titleInput.value.trim() || 'Untitled Haven Draft';
+                const content = contentInput.value.trim();
+
+                if (!content) {
+                    alert('Please write some thoughts before saving!');
+                    return;
+                }
+
+                const drafts = JSON.parse(localStorage.getItem('literary_haven_drafts') || '[]');
+                drafts.unshift({ id: Date.now(), title, content, date: new Date().toLocaleDateString() });
+                localStorage.setItem('literary_haven_drafts', JSON.stringify(drafts));
+
+                titleInput.value = '';
+                contentInput.value = '';
+                updateCounters();
+                renderSavedDrafts();
+            });
+
+            function renderSavedDrafts() {
+                const drafts = JSON.parse(localStorage.getItem('literary_haven_drafts') || '[]');
+                if (drafts.length === 0) {
+                    savedContainer.innerHTML = `<p class="text-xs text-slate-500 italic font-bengali">কোনো সংরক্ষিত খসড়া নেই (No saved drafts yet).</p>`;
+                    return;
+                }
+
+                savedContainer.innerHTML = drafts.map(d => `
+                    <div class="bg-navy-900/90 p-4 rounded-xl border border-slate-700/60 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <h5 class="text-sm font-bold text-gold-400 font-bengali line-clamp-1">${d.title}</h5>
+                                <span class="text-[10px] text-slate-500">${d.date}</span>
+                            </div>
+                            <p class="text-xs text-slate-300 font-bengali line-clamp-2 mt-1">${d.content}</p>
+                        </div>
+                        <button onclick="deleteDraft(${d.id})" class="mt-3 text-[10px] text-red-400 hover:text-red-300 self-end">Delete</button>
+                    </div>
+                `).join('');
+            }
+
+            window.deleteDraft = function(id) {
+                let drafts = JSON.parse(localStorage.getItem('literary_haven_drafts') || '[]');
+                drafts = drafts.filter(d => d.id !== id);
+                localStorage.setItem('literary_haven_drafts', JSON.stringify(drafts));
+                renderSavedDrafts();
+            };
+
+            renderSavedDrafts();
+        }
+
+        // --- EVENT LISTENERS & INITIALIZATION ---
+        window.addEventListener('DOMContentLoaded', () => {
+            renderAuthorCards();
+            renderBooksGrid();
+            renderCinemaGrid();
+            renderVideoPlaylist();
+            initSandbox();
+            displayRandomQuote();
+
+            // Mobile Menu Toggle
+            document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.toggle('hidden');
+            });
+
+            // Modal Close Buttons
+            document.getElementById('closeAuthorModal').addEventListener('click', () => closeModal('authorModal'));
+            document.getElementById('closeBookModal').addEventListener('click', () => closeModal('bookModal'));
+
+            // Book Filter Buttons
+            document.querySelectorAll('.book-filter-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.book-filter-btn').forEach(b => {
+                        b.classList.remove('bg-gold-500', 'text-navy-900');
+                        b.classList.add('bg-navy-700', 'text-slate-300');
+                    });
+                    e.target.classList.remove('bg-navy-700', 'text-slate-300');
+                    e.target.classList.add('bg-gold-500', 'text-navy-900');
+                    renderBooksGrid(e.target.dataset.filter);
+                });
+            });
+
+            // Quote Filters
+            document.querySelectorAll('.quote-filter-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.quote-filter-btn').forEach(b => {
+                        b.classList.remove('bg-gold-500', 'text-navy-900');
+                        b.classList.add('bg-navy-800', 'text-slate-300');
+                    });
+                    e.target.classList.remove('bg-navy-800', 'text-slate-300');
+                    e.target.classList.add('bg-gold-500', 'text-navy-900');
+
+                    const cat = e.target.dataset.cat;
+                    currentQuotesList = cat === 'all' ? [...quotesData] : quotesData.filter(q => q.cat === cat);
+                    displayRandomQuote();
+                });
+            });
+
+            // Quote Buttons
+            document.getElementById('nextQuoteBtn').addEventListener('click', displayRandomQuote);
+            document.getElementById('copyQuoteBtn').addEventListener('click', () => {
+                const text = `${document.getElementById('displayQuoteText').innerText} ${document.getElementById('displayQuoteAuthor').innerText}`;
+                
+                // iFrame compliant copy
+                const el = document.createElement('textarea');
+                el.value = text;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+
+                const origText = document.getElementById('copyQuoteBtn').innerHTML;
+                document.getElementById('copyQuoteBtn').innerHTML = `<i class="fa-solid fa-check text-emerald-400"></i> Copied!`;
+                setTimeout(() => {
+                    document.getElementById('copyQuoteBtn').innerHTML = origText;
+                }, 2000);
+            });
+
+            // Ambient Sound Buttons
+            const rainBtn = document.getElementById('ambientRainBtn');
+            const forestBtn = document.getElementById('ambientForestBtn');
+
+            rainBtn.addEventListener('click', () => {
+                const playing = ambientSound.toggleRain();
+                rainBtn.classList.toggle('bg-gold-500/20', playing);
+                rainBtn.classList.toggle('text-gold-400', playing);
+            });
+
+            forestBtn.addEventListener('click', () => {
+                const playing = ambientSound.toggleForest();
+                forestBtn.classList.toggle('bg-gold-500/20', playing);
+                forestBtn.classList.toggle('text-gold-400', playing);
+            });
+
+            // Auto Quote Rotator in Hero
+            let heroQuoteIdx = 0;
+            setInterval(() => {
+                heroQuoteIdx = (heroQuoteIdx + 1) % quotesData.length;
+                const q = quotesData[heroQuoteIdx];
+                document.getElementById('heroQuoteText').innerText = `"${q.text}"`;
+                document.getElementById('heroQuoteAuthor').innerText = `— ${q.author.toUpperCase()}`;
+            }, 7000);
+        });
+    </script>
+</body>
+</html>
